@@ -13,13 +13,13 @@ Create an _.npmrc_ file inside the same folder as _package.json_ (if it's not al
 Then, add the following line inside _.npmrc_:
 #### If it's public package
 ```
-@terran-source:registry=https://npm.pkg.github.com
+@terran-source:registry=https://npm.pkg.github.com/
 always-auth=false
 ```
 #### If it's private package
 ```
 //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-@terran-source:registry=https://npm.pkg.github.com
+@terran-source:registry=https://npm.pkg.github.com/
 always-auth=true
 ```
 

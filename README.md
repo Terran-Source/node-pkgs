@@ -1,5 +1,5 @@
 # npm-pkgs
-Holds all the public Node packages (npm) for `@Terran-Source`
+Holds all the public Node packages (npm) for `@terran-source`
 
 ## How to use any of these packages
 
@@ -11,16 +11,24 @@ Create an _.npmrc_ file inside the same folder as _package.json_ (if it's not al
   |- ... (others)
 ```
 Then, add the following line inside _.npmrc_:
+#### If it's public package
 ```
-@Terran-Source:registry=https://npm.pkg.github.com
+@terran-source:registry=https://npm.pkg.github.com
+always-auth=false
+```
+#### If it's private package
+```
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+@terran-source:registry=https://npm.pkg.github.com
+always-auth=true
 ```
 
 Now, add the package as dependency to your project
 
 #### via `npm`
 
-`npm install @Terran-Source/hooks`
+`npm install @terran-source/hooks`
 
 #### via `yarn`
 
-`yarn add @Terran-Source/hooks`
+`yarn add @terran-source/hooks`
